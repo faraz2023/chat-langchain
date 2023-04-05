@@ -8,14 +8,14 @@ from langchain.vectorstores.faiss import FAISS
 
 import os
 from dotenv import load_dotenv
-
+import openai
 
 api_key = load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def ingest_docs():
     """Get documents from web pages."""
-    loader = ReadTheDocsLoader("langchain.readthedocs.io/en/latest/")
+    loader = ReadTheDocsLoader("python.langchain.com/en/latest/")
     raw_documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
