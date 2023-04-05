@@ -1,3 +1,13 @@
+First, you need to setup a virtual environment. 
+Make sure you have Python version 3.9 or higher. The commands follow unix terminal syntax. If you are on a windows machine, you can install and use the Ubuntu terminal from the Microsoft Store.
+
+
+```
+python -m venv venv
+. venv/bin/activate 
+pip install -r requirements.txt
+```
+
 # 🦜️🔗 ChatLangChain
 
 This repo is an implementation of a locally hosted chatbot specifically focused on question answering over the [LangChain documentation](https://langchain.readthedocs.io/en/latest/).
